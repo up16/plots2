@@ -1,7 +1,7 @@
 # Dockerfile # Plots2
 # https://github.com/publiclab/plots2
 
-FROM ruby:2.6.6-stretch
+FROM ruby:2.6.6-buster
 
 LABEL description="This image deploys Plots2."
 
@@ -9,10 +9,10 @@ LABEL description="This image deploys Plots2."
 ENV HOME /root
 
 RUN echo \
-   'deb http://ftp.ca.debian.org/debian/ stretch main\n \
-    deb http://ftp.ca.debian.org/debian/ stretch-updates main\n \
-    deb http://security.debian.org stretch/updates main\n \
-    deb http://deb.nodesource.com/node_8.x stretch main\n' \
+   'deb http://ftp.ca.debian.org/debian/ buster main\n \
+    deb http://ftp.ca.debian.org/debian/ buster-updates main\n \
+    deb http://security.debian.org buster/updates main\n \
+    deb http://deb.nodesource.com/node_8.x buster main\n' \
     > /etc/apt/sources.list
 
 # Install dependencies
