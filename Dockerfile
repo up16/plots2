@@ -49,6 +49,6 @@ COPY . /app
 #COPY start.sh /app/start.sh
 COPY ./db/schema.rb.example /app/db/schema.rb
 COPY ./config/database.yml.example /app/config/database.yml
-RUN yarn
+RUN yarnpkg
 
 CMD [ "bash", "-l", "start.sh" ]
